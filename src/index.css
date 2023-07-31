@@ -31,7 +31,7 @@ body {
   font-family: "Poppins", "sans-serif";
   margin: 0;
 }
-
+/*  ! element bazinda default olarak vermek istedigimiz stilleri base layerde veriyoruz */
 /* MovieCard Custom CSS */
 .movie {
   background-color: #080f36;
