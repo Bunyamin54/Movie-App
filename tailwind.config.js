@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  // ! kendi theme ayarlarimiz eklemek icin bu kismi kullaniyoruz
   theme: {
     extend: {
       colors: {
