@@ -93,7 +93,7 @@ body {
   min-width: 800px;
   min-height: 600px;
 }
-
+/*  ! ccomponent class bazinda default olarak vermek istedigimiz stilleri component layerde veriyoruz */
 /* Login Custom CSS */
 
 .custom-linear-gradient::before {
