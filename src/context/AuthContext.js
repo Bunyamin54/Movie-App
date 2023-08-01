@@ -5,6 +5,7 @@ import {
 import React, { createContext } from "react";
 import { auth } from "../auth/firebase";
 import { useNavigate } from "react-router-dom";
+import { toastErrorNotify, toastSuccessNotify } from "../helpers/ToastNotify";
 
 export const AuthContext = createContext();
 
@@ -25,11 +26,11 @@ const AuthContextProvider = ({ children }) => {
       );
       console.log(userCredential);
       navigate("/");
+      toastSuccessNotify("Registered successfully")
     } catch (error) {
-      console.log(error.message);
+      toastErrorNotify(error.message);
     }
   };
-
   //* https://console.firebase.google.com/
   //* => Authentication => sign-in-method => enable Email/password
   //! Email/password ile girişi enable yap
@@ -42,9 +43,10 @@ const AuthContextProvider = ({ children }) => {
         password
       );
       navigate("/");
+      toastSuccessNotify("Logged in successfully!")
       console.log(userCredential);
     } catch (error) {
-      console.log(error.message);
+      toastErrorNotify(error.message);
     }
   };
 
