@@ -1,6 +1,7 @@
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
 import React, { createContext } from "react";
 import { auth } from "../auth/firebase";
@@ -50,7 +51,13 @@ const AuthContextProvider = ({ children }) => {
     }
   };
 
-  const values = { createUser, signIn };
+  const logOut = () => {
+
+    signOut (auth)
+    toastSuccessNotify("Logged out successfuly")
+  }
+
+  const values = { createUser, signIn, logOut };
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
 };
 
