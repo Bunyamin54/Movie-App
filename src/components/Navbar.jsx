@@ -1,8 +1,9 @@
 import { Fragment, useContext } from "react";
-import { Disclosure, Menu, Switch, Transition } from "@headlessui/react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
 import avatar from "../assets/icons/avatar.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import Switch from "./Switch";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -26,7 +27,7 @@ export default function Navbar() {
               {currentUser && (
                 <h5 className="mr-2 capitalize">{currentUser?.displayName}</h5>
               )}
-              <Switch/>
+              <Switch />
               {/* Profile dropdown */}
               <Menu as="div" className="relative ml-3">
                 <div>
