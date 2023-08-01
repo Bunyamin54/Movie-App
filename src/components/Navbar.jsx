@@ -9,8 +9,7 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
- 
-   const {logOut} = useContext(AuthContext)
+  const { logOut } = useContext(AuthContext);
   const currentUser = { displayName: "felix franko" };
   return (
     <>
